@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.18)  22 NOV 2022 13:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.18)  22 NOV 2022 14:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./3.tex
-(3.tex
+**./4.tex
+(4.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-09-28>
 (C:\Users\avere\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -211,8 +211,8 @@ tex.def
 File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count274
 \l__pdf_internal_box=\box53
-) (3.aux)
-\openout1 = `3.aux'.
+) (4.aux)
+\openout1 = `4.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
@@ -326,39 +326,34 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
 (C:\Users\avere\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-
-Package amsmath Warning: Foreign command \atopwithdelims;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 75.
-
 [1
 
-{C:/Users/avere/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (3.aux) ) 
+{C:/Users/avere/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] (4.aux) 
+) 
 Here is how much of TeX's memory you used:
- 3427 strings out of 475385
- 52737 string characters out of 2776906
- 403408 words of memory out of 3000000
- 24773 multiletter control sequences out of 15000+600000
+ 3424 strings out of 475385
+ 52706 string characters out of 2776906
+ 417408 words of memory out of 3000000
+ 24770 multiletter control sequences out of 15000+600000
  474481 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,9n,62p,247b,129s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:
-/Users/avere/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plmi.enc}{C:/User
-s/avere/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plms.enc}{C:/Users/ave
-re/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plrm.enc}{C:/Users/avere/Ap
-pData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plme.enc}<C:/Users/avere/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/pl/plex10.pfb><C:/Users/avere/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/pl/plmi12.pfb><C:/Users/avere/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/pl/plmi6.pfb><C:/Users/avere/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/pl/plmi8.pfb><C:/Users/avere/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/pl/plr12.pfb><C:/Users/avere/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/pl/plr6.pfb><C:/Users/avere/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/pl/plr8.pfb><C:/Users/avere/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/pl/plsy10.pfb><C:/Users/avere/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/pl/plsy8.pfb>
-Output written on 3.pdf (1 page, 61773 bytes).
+ 55i,12n,62p,247b,180s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/Users/avere/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plmi.enc}{C:/
+Users/avere/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plrm.enc}{C:/Users
+/avere/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plms.enc}{C:/Users/aver
+e/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plme.enc}<C:/Users/avere/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/pl/plex10.pfb><C:/Users/avere/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/pl/plmi12.pfb><C:/Users/avere/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/pl/plmi6.pfb><C:/Users/avere/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/pl/plmi8.pfb><C:/Users/avere/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/pl/plr12.pfb><C:/Users/avere/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/pl/plr6.pfb><C:/Users/avere/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/pl/plr8.pfb><C:/Users/avere/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/pl/plsy10.pfb><C:/Users/avere/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/pl/plsy8.pfb>
+Output written on 4.pdf (2 pages, 60167 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
+ 58 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
