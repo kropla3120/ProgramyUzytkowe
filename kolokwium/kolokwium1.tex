@@ -1,0 +1,109 @@
+\documentclass[12pt, letterpaper, titlepage]{article}
+\usepackage[left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage[MeX]{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{amsmath} %pakiet matematyczny
+\usepackage{amssymb} %pakiet dodatkowych symboli
+\title{Kolokwium pierwsze}
+\author{Mateusz Kroplewski}
+\date{06.12.2022}
+\begin{document}
+\maketitle
+\section{Szyfrowanie blokowe}
+\textbf{Szyfrowanie blokowe} \cite{blokowe} traktuje poszczególne bloki tekstu jawnego jako odrębne całości i każdy z nich produkuje szyfrogram tej samej długości. Zazwyczaj używane są bloki o długości 64 lub 128 bitów. Podobnie jak w przypadku szyfru strumieniowego obaj uczestnicy komunikacji  współdzielą ten sam klucz. Przy wykorzystaniu różnych trybów operacyjnych,za pomocą szyfru blokowego można osiągnąć efekty podobne do tych , jakie daje szyfrowanie strumieniowe. \\ Wiele wysiłku poświęcono zbadaniu właściwości szyfrów blokowych. Generalnie znajdują one wyraźnie większe zastosowanie niż szyfry strumieniowe: większość aplikacji sieciowych realizujących szyfrowanie symetryczne wykorzystuje właśnie szyfry blokowe.
+\subsection{Standard DES}
+Najbardziej rozpowszechnionym obecnie schematem szyfrowania jest DES (\textit{Data Encryption Standard}) \cite{des}, przyjęty w 1977 roku przez Narodowe Biuro Standaryzacji USA (\textit{National Bureau of Standards}), obecnie Narodowy Instytut Normalizacji i Technologi (NIST -\textit{National Institute of Standards and Technology}) jako Federalny Standard Przetwarzania Informacji nr46 (FIST PUB 46). Sam algorytm szyfrowania określany jest jako \textit{Data Encryption Algorithm},w skrócie DEA. W standardzie DES dane wejściowe przetwarzane są w 64-bitowych blokach przy użyciu 56-bitowego klucza: algorytm transformuje 64-bitowe bloki tekstu jawnego na64-bitowe bloki szyfrogramu, te same kroki i przy użyciu tego samego klucza wykonywane są w ramach deszyfracji.
+\subsection{Szyfrowanie w standardzie DES}
+Tak jak w każdym schemacie szyfrowania informację wejściową stanowią dwa elementy: tekst
+jawny i klucz. Tekst jawny ma postać 64-bitowego bloku, długość klucza wynosi 56 bitów.
+Przetwarzanie tekstu jawnego odbywa się w trzech fazach. Pierwszą z nich stanowi \textbf{permutacja wstępna} (IP - \textit{initial permutation}), w ramach której wejściowy blok 64-bitowy
+przekształcany jest do postaci permutowanego wejścia (\textit{permuted input}). Faza druga stano-
+wi ciąg \textbf{16 jednakowych rund}, z których każda obejmuje permutowanie i podstawianie,
+32-bitowe połówki bloku stanowiącego wynik ostatniej rundy zamieniane są miejscami, po
+czym blok ten (zwany \textbf{wyjściem wstępnym}-\textit{preoutput}) poddawany jest fazie trzeciej, czyli
+\textbf{permutacji stanowiącej odwrotność permutacji wstępnej}
+\\ \\
+Druga część odzwierciedla natomiast ciąg przekształceń, jakim poddawany jest 56-bitowy
+klucz. Pierwszym z tych przekształceń jest permutacja początkowa. Następnie w ramach
+każdej z 16 rund produkowane są \textit{podklucze} $K_i$. Produkcja ta odbywa się w każdej rundzie dwuetapowo. W pierwszym etapie otrzymany podklucz poddawany jest operacji lewostronnego obrotu (o 1 lub 2 bity), wynik tego etapu przekazywany jest do następnej rundy; jest on
+jednocześnie permutowany (to drugi etap - wybór permutowany 2), dając w rezultacie klucz
+$K_i$. Permutacja wykonywana w drugim etapie jest identyczna dla każdej rundy, jednakże ze
+względu na powtarzaną (w pierwszym etapie) operację lewostronnego obrotu kolejne klucze  
+$K_i$ różnią się od siebie. \\\\
+Przykład permutacji wstępnej w tabeli 1.2.
+\begin{table}[h]
+\centering\caption{Permutacja wstępna IP}
+\begin{tabular}{|cccccccc|}
+\hline
+58&50&42&34&26&18&10&2\\
+60&52&44&36&28&20&12&4\\
+62&54&46&38&30&22&14&6\\
+64&56&48&40&32&24&16&8\\
+57&49&41&33&25&17&9&1\\
+59&51&43&35&27&19&11&3\\
+61&53&45&37&29&21&13&5\\
+63&55&47&39&31&23&15&7\\
+\hline
+\end{tabular}
+\end{table}
+\subsection{Szczegóły jednej rundy}
+Oznaczmy przez L i R (odpowiednio) lewy i prawy półblok 64-biotowego bloku wejściowego;
+identycznie jak w klasycznej wersji szyfru Feistela są one traktowane oddzielnie, według formuły
+\begin{center}
+\begin{tabular}{l}
+$L_i = R_{i-1}$ \\
+$R_i = L_{i-1} \ \bigoplus \	 F(R_{i-1}, K_i)$  
+\end{tabular}
+\end{center}
+Klucz rundy $K_i$ ma rozmiar 48 bitów, wejściowy półblok R - 32 bity. Półblok ten jest wpierw
+rozszerzany do 48 bitów za pomocą złożenia permutacji i dublowania wybranych 16 bitów.
+Wynik tej operacji składany jest z kluczem $K_i$ przez operację XOR. Wynik złożenia przetwarzany jest przez funkcję podstawieniową F zwracającą wartość 32-bitową, która następnie
+jest permutowana.
+\newpage
+\section{Ciasto jogurtowe z żurawiną}
+Fantastyczne, wilgotne, mięciutkie ciasto jogurtowe z żurawiną, suto polukrowane. Latem
+piekłam to ciasto z dodatkiem agrestu, teraz występuje w zimowej odsłonie. Ciasto długo
+utrzymuje świeżość a owoce żurawiny pasują tutaj jak żadne inne! \cite{ciasto}
+\subsection*{Składniki na ciasto jogurtowe z żurawiną}
+\begin{enumerate}
+\item 165g masła
+\item 160 g drobnego cukru do wypieków
+\item 8 g cukru wanilinowego lub 1 łyżeczka ekstraktu z wanilii
+\item 3 duże jajka
+\item 150 g jogurtu naturalnego lub greckiego
+\item 270 g mąki pszennej
+\item 2 łyżeczki proszku do pieczenia
+\item 300 g żurawiny
+\end{enumerate}
+Wszystkie składniki powinny być w temperaturze pokojowej. \\
+\\
+W misie miksera umieścić masło i oba cukry (lub cukier i wanilię). Utrzeć do powstania
+jasnej i puszystej masy maślanej. Dodawać jajka, jedno po drugim, ucierając do całkowite-
+go połączenia się składników po każdym dodaniu (ciasto na tym etapie może wyglądać na
+zwarzone, ale nie ma to wpływu na wypiek końcowy). Bezpośrednio do utartych składników
+przesiać mąkę pszenną i proszek do pieczenia oraz dodać jogurt. Wymieszać szpatułką tylko
+do połączenia się składników, nie dłużej. Dodać żurawinę i krótko wymieszać. \\
+\\
+Formę o średnicy 25 cm wyłożyć papierem do pieczenia. Przełożyć do niej ciasto, wyrównać.\\
+\\
+Ciasto jogurtowe z żurawiną piec w temperaturze 170ºC, bez termoobiegu, przez około 50
+minut lub dłużej, do tzw. suchego patyczka. Wyjąć i wystudzić w formie. Polukrować.
+\subsection*{Waniliowy lukier}
+\begin{enumerate}[•]
+\item 1 szklanka cukru pudru
+\item 2 - 3 łyżki wrzącej wody lub soku z cytryny
+\item 1 łyżeczka ekstraktu z wanilii 
+\end{enumerate}
+Wszystkie składniki umieścić miseczce i rozetrzeć grzbietem łyżki do otrzymania gęstego
+lukru (gęstość lukru regulować dodatkiem dodatkowego cukru pudru lub wody).
+\begin{thebibliography}{9}
+\bibitem{blokowe}
+William Stallings, \textit{Kryptografia  i  bezpieczeństwo  sieci  komputerowych} Helion, 2012, str.105
+\bibitem{des}
+William Stallings, \textit{Kryptografia  i  bezpieczeństwo  sieci  komputerowych} Helion, 2012, str.115
+\bibitem{ciasto}
+https://mojewypieki.com/przepis/ciasto-jogurtowe-z-zurawina
+\end{thebibliography}
+\end{document}
